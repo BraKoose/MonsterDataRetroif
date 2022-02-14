@@ -6,7 +6,7 @@
 
     <item android:id="@+id/profile"
         android:title="Monster Profile"
-        android:icon="@drawable/ic_icon"/>
+        android:icon="@drawable/ic_profile"/>
 
 
 </menu>
