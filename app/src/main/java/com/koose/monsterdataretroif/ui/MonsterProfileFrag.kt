@@ -10,11 +10,8 @@ import com.koose.monsterdataretroif.R
 
 class MonsterProfileFrag : Fragment() {
 
-    companion object {
-        fun newInstance() = MonsterProfileFrag()
-    }
 
-    private lateinit var viewModel: MonsterProfileViewModel
+    private lateinit var viewModel: MonsterHomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +20,5 @@ class MonsterProfileFrag : Fragment() {
         return inflater.inflate(R.layout.monster_profile_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MonsterProfileViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

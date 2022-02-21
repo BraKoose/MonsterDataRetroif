@@ -13,7 +13,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 class MonsterRespository (val app: Application){
-    private val monsterData = MutableLiveData<List<MonsterData>>()
+     val monsterData = MutableLiveData<List<MonsterData>>()
 
     init {
         CoroutineScope(Dispatchers.IO).launch {
