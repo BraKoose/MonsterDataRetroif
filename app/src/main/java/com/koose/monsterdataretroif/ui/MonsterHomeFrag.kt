@@ -7,26 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.koose.monsterdataretroif.R
+import com.koose.monsterdataretroif.databinding.MonsterHomeFragmentBinding
 
 class MonsterHomeFrag : Fragment() {
-
-    companion object {
-        fun newInstance() = MonsterHomeFrag()
-    }
-
+    private lateinit var binding:   MonsterHomeFragmentBinding
     private lateinit var viewModel: MonsterHomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.monster_home_fragment, container, false)
+        binding = MonsterHomeFragmentBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this).get(MonsterHomeViewModel::class.java)
+        return binding.root
+
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MonsterHomeViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
 
 }
