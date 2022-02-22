@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background.xml" value="0.137" />
+        <entry key="app/src/main/res/drawable/background_selected.xml" value="0.137" />
+        <entry key="app/src/main/res/drawable/grid_item_background.xml" value="0.137" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/monster_grid_items.xml" value="0.34962406015037595" />
         <entry key="app/src/main/res/layout/monster_home_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/monster_profile_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.1953125" />
