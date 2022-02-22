@@ -4,7 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.RatingBar
+import android.widget.TextView
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.koose.monsterdataretroif.R
 import com.koose.monsterdataretroif.data.MonsterData
 
@@ -22,10 +27,19 @@ class MonsterAdapter( val context: Context,
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val monster = monstList[position]
+        holder.nameText.text = monster.monsterName
+        holder.ratingBar.rating = monster.scariness.toFloat()
+
+        Glide.with(context)
+            .load(monster.imageFileUrl)
+            .into(holder.monsterImage)
     }
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+        val nameText: TextView = itemView.findViewById(R.id.nameText)
+        val monsterImage: ImageView = itemView.findViewById(R.id.monsterImage)
+        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
 
     }
 

@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.commit {
-            add<MonsterHomeFrag>(R.id.container, "Koose")
+            add<MonsterHomeFrag>(R.id.container, null)
 
         }
     }
