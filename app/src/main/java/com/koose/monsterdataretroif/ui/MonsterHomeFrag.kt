@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.koose.monsterdataretroif.R
 import com.koose.monsterdataretroif.data.MonsterData
 import com.koose.monsterdataretroif.databinding.MonsterHomeFragmentBinding
+import java.lang.StringBuilder
 import java.util.*
 
 class MonsterHomeFrag : Fragment() {
@@ -25,7 +26,11 @@ class MonsterHomeFrag : Fragment() {
         viewModel = ViewModelProvider(this).get(MonsterHomeViewModel::class.java)
 
         viewModel.monsterData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-
+            val strg = StringBuilder()
+            for(monsterD in it){
+                strg.append(monsterD.monsterName + "\n")
+            }
+        binding.tvNames.text = strg
         })
 
         return binding.root

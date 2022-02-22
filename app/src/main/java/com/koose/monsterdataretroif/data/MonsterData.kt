@@ -4,7 +4,7 @@ import com.koose.monsterdataretroif.utlis.IMAGE_BASE_URL
 
 data class MonsterData(
     val imageFile: String,
-    val MonsterName: String,
+    val monsterName: String,
     val caption:String,
     val description:String,
     val price : Double,
